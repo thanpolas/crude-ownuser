@@ -6,45 +6,38 @@
 
 ## Install
 
-~~~Install the module using NPM:~~~
-
-### >>>>>> NOT PUBLISHED YET <<<<<<
+Install the module using NPM
 
 ```
 npm install crude-ownuser --save
 ```
-## <a name='TOC'>Table of Contents</a>
 
-1. [Overview](#overview)
-1. [API](#api)
+## Documentation
 
-## Overview
+The Crud Own User package applies policies to all CRUD OPs that ensure only records belonging to the current user are being read, edited or deleted.
 
-The Crude OwnUser package will make sure all incoming CRUD requests are owned by their respective user.
-
-## API
-
-**[[⬆]](#TOC)**
-
-### <a name='using'>Using Crude OwnUser</a>
-
+### Quick Use
 
 ```js
 var crude = require('crude');
-var ownuser = require('crude-ownuser');
+var crudeOwnUser = require('crude-ownuser');
 
 var userCrude = crude('/user', controller);
 
-userCrude.use(ownUser({
-    // The property in the request object that represents the user id.
-    requestProperty: 'userId',
-    // The schema attribute that represents the user id.
-    schemaProperty: 'userId',
-}));
+crudeOwnUser(userCrude, {
+    // Where to expect the User Data Object on the Express Request Object.
+    expressUdoAttribute: 'user',
+
+    // The attribute representing the User Id on the Express Request Object.
+    expressUdoIdAttribute: 'id',
+
+    // How the user id attribute is named on the model.
+    schemaUserId: 'userId',
+});
 
 ```
 
-## Release History
+The Crude Own User package will enforce the policy by augmenting the incoming query with the user id of the current client. If the client is not authenticated (no express UDO is found) then a Not Authenticated (401) error will be returned to the client.
 
 - **v0.0.1**, *TBD*
     - Big Bang
