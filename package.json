@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "crude-ownuser",
   "version": "0.0.0",
   "main": "./lib/crude-ownuser",
