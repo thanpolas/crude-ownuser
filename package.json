@@ -1,6 +1,6 @@
 {
   "name": "crude-ownuser",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./lib/crude-ownuser",
   "description": "A plugin for Crude enforcing own user policy on all routes.",
   "homepage": "https://github.com/thanpolas/crude-ownuser",
