@@ -1,12 +1,13 @@
 /**
  * @fileOverview Base API Surface tests.
  */
-var Promise = require('bluebird');
 var chai = require('chai');
 var expect = chai.expect;
 
+var crudeOwnUser = require('../');
+
 describe('Base API Surface', function() {
-  it('should do what...', function(){
-     // test!
+  it('should expose a function', function(){
+    expect(crudeOwnUser).to.be.a('function');
   });
 });

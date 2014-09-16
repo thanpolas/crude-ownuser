@@ -3,7 +3,7 @@
   "name": "crude-ownuser",
   "version": "0.0.0",
   "main": "./lib/crude-ownuser",
-  "description": "EDIT",
+  "description": "A plugin for Crude enforcing own user policy on all routes.",
   "homepage": "https://github.com/thanpolas/crude-ownuser",
   "bugs": "https://github.com/thanpolas/crude-ownuser/issues",
   "author": {
