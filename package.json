@@ -22,6 +22,9 @@
   "scripts": {
     "test": "./node_modules/.bin/grunt jshint:lib && ./node_modules/.bin/mocha -b test/spec -u bdd  -R spec"
   },
+  "peerdependencies": {
+    "crude": "^0.7.1"
+  },
   "dependencies": {
     "cip": "~0.2.5",
     "bluebird": "~2.3.2",
