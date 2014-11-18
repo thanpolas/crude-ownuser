@@ -39,9 +39,11 @@ crudeOwnUser(userCrude, {
 
 The Crude Own User package will enforce the policy by augmenting the incoming query with the user id of the current client. If the client is not authenticated (no express UDO is found) then a Not Authenticated (401) error will be returned to the client.
 
-- **v0.0.2**, *17/Sep/2014*
+- **v0.0.3**, *18 Nov 2014*
+    - Ensure if not authed that a 401 HTTP code is used.
+- **v0.0.2**, *17 Sep 2014*
     - Adjust main module to latest query middleware Crude feature.
-- **v0.0.1**, *16/Sep/2014*
+- **v0.0.1**, *16 Sep 2014*
     - Big Bang
 
 ## License
